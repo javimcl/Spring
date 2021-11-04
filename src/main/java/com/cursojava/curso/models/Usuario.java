@@ -4,6 +4,9 @@
  */
 package com.cursojava.curso.models;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
 /**
  * <b> Incluir aqui la descripcion de la clase. </b>
  * 
@@ -13,6 +16,8 @@ package com.cursojava.curso.models;
  *          [$Author: jluceroc $, $Date: 29 oct. 2021 $]
  *          </p>
  */
+@Entity
+@Table(name = "usuarios")
 public class Usuario {
 
 	private Long id;

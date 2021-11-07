@@ -1,7 +1,6 @@
 // Call the dataTables jQuery plugin
 $(document).ready(function() {
 
-  #in ready
 });
 
 
@@ -15,7 +14,7 @@ async function registrarUsuario(){
     let repetirPassword =document.getElementById('txtRepetirPassword').value;
 
     if(repetirPassword != datos.password){
-        alert('La contrase;a no es igual');
+        alert('La contrasena no es igual');
         return;
 
     }
@@ -26,10 +25,12 @@ async function registrarUsuario(){
     headers: {
       'Accept': 'application/json',
       'Content-Type': 'application/json'
-    }
+    },
     body: JSON.stringify(datos)
   });
-  const usuarios = await request.json();
+
+  alert("La cuenta fue creada con exito");
+  window.location.href='login.html'
 
 }
 
